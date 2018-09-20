@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @Date: 2018/8/27 10:56
  * @Description:调用eureka-client的地址
  */
-@FeignClient(value = "eureka-client",configuration = FeignConfig.class,fallback = HiHystrix.class)
+@FeignClient(value = "eureka-client-demo",configuration = FeignConfig.class,fallback = HiHystrix.class)
 public interface EurekaFeignClient {
 
     @GetMapping("/index/index") //eureka-client的请求地址

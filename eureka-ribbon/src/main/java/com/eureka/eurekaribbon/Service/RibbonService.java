@@ -22,7 +22,7 @@ public class RibbonService {
     @HystrixCommand(fallbackMethod = "hiError")//启用熔断机制
     public String hi(String name){
         logger.info("ribbon请求eureka-client 入参:{}",name);
-        return restTemplate.getForObject("http://eureka-client/index/index?"+name,String.class);
+        return restTemplate.getForObject("http://eureka-client-demo/index/index?"+name,String.class);
     }
 
     public String hiError(String name){
